@@ -30,9 +30,9 @@ async function createAsset(algodClient, Prince) {
     // Whether user accounts will need to be unfrozen before transacting    
     const defaultFrozen = false;
     // Used to display asset units to user    
-    const unitName = "CHOICE";
+    const unitName = "GCE";
     // Friendly name of the asset    
-    const assetName = "Prince's Artwork Coins@arc3";
+    const assetName = "Global Choice Extension";
     // Optional string pointing to a URL relating to the asset
     const url = "https://jsonkeeper.com/b/481K";
 
