@@ -3,6 +3,8 @@ NFT NAME: MASK UP CHOICE
 
 DISCORD USER NAME: MAYOVIC#1145
 
+This ART was created with a Graphical design software
+
 
 # NFTs
 Repo for Choice Coin NFTs.
