@@ -1,14 +1,8 @@
 # Moralis Mutants NFT Collection | Generative Art Engine
 
-🧟‍♀️🧟‍♂️ Welcome to Rekt City on behalf of its horribly mutated survivors. 🧟‍♀️🧟‍♂️
-
 ## About
 
 Aim: Save time and resources for artists and developers by allowing them to generate and host NFT art, across blockchains, in one place (utilising Moralis).
-
-These tutorial videos are a great introduction.
-Part 1: [Link to Moralis YouTube Video](https://youtu.be/KBV4FrCv4ps)
-Part 2: [Link to Moralis YouTube Video](https://youtu.be/FcH7qXnOgzs)
 
 ## Quick Launch 🚀
 
@@ -65,3 +59,4 @@ constructor()
 - [Moralis Discord](https://discord.com/channels/819584798443569182)
 - [Moralis GitHub](https://github.com/MoralisWeb3)
 - [Moralis YouTube](https://www.youtube.com/channel/UCgWS9Q3P5AxCWyQLT2kQhBw)
+
