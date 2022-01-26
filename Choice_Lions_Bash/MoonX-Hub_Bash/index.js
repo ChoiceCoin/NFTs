@@ -113,5 +113,5 @@ const startCreating = async () => {
 };
 
 // Initiate code
-// startCreating();
+startCreating();
 
