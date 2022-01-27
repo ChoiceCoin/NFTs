@@ -1,0 +1,25 @@
+{
+  "name": "Choice NFT",
+  "description": "Choice's NFT",
+  "image": "https://gateway.pinata.cloud/ipfs/QmSY3G73n6H8S848SxjCpZZAXvVZTiCXAk1nGZeM2JKLy4?preview=1",
+  "image_integrity": "sha256-IIPgh6/yr7/jGq4x8DYJz1yY4sX5i/1nQ/eOqISaKm8=",
+  "properties": {
+    "simple_property": "Choice NFT",
+    "rich_property": {
+      "name": "ChoiceNFT",
+      "value": "001",
+      "display_value": "001",
+      "class": "emphasis",
+      "css": {
+        "color": "#ffffff",
+        "font-weight": "bold",
+        "text-decoration": "underline"
+      }
+    },
+    "array_property": {
+      "name": "NFT",
+      "value": [1, 2, 3, 4],
+      "class": "emphasis"
+    }
+  }
+}
