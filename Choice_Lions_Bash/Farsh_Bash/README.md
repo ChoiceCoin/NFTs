@@ -14,6 +14,7 @@ TnxId - https://testnet.algoexplorer.io/tx/7ICGXGKXRM2GW5AHGEPOQ3ZPDJ4GKFG3E34QV
 creator address. - ZHO5WV5EMHMOFJEF6UTYWWZQFU3D5BQRBMRVYM67WW2NK732JWIJSV5BEM
 
 Minted ChoiceNFT: [ChoiceNFT.png](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/ChoiceNFT.png)
+
 Minted LionNFT: [LionNFT.png](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/Farsh_NFT/LionNFT%20(2).png)
 
 ## Run Locally
