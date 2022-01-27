@@ -10,7 +10,7 @@ creator address. - ZHO5WV5EMHMOFJEF6UTYWWZQFU3D5BQRBMRVYM67WW2NK732JWIJSV5BEM
 
 - `npm install` to install dependencies
 
-- `node Samuel_Nft.js` to start script
+- `node ChoiceNFT.js` to start script
 
 or Alternatively you can use
 
