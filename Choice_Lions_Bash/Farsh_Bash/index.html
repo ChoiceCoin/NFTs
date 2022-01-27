@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h4>Create an asset</h4>
+      <label for="assetName">Asset Name</label>
+      <input
+        type="assetName"
+        id="assetName"
+        placeholder="Ouis"
+        v-model="form.assetName"
+      />
+      <div
+        class="error"
+        v-if="$v.form.assetName.$invalid && submitStatus === 'ERROR'"
+      >
+        Please enter an asset name
+      </div>
+      <label for="assetUnitName">Asset Unit Name</label>
+      <input
+        type="assetUnitName"
+        id="assetUnitName"
+        placeholder="Oui"
+        v-model="form.assetUnitName"
+      />
+      <div
+        class="error"
+        v-if="$v.form.assetUnitName.$invalid && submitStatus === 'ERROR'"
+      >
+        Please enter an asset unit name
+      </div>
+      <label for="assetTotal">Asset Total</label>
+      <input
+        type="assetTotal"
+        id="assetTotal"
+        placeholder="1000"
+        v-model.number="form.assetTotal"
+      />
+      <div
+        class="error"
+        v-if="$v.form.assetTotal.$invalid && submitStatus === 'ERROR'"
+      >
+        Please enter an asset total
+      </div>
+      <label for="assetURL">Asset URL</label>
+      <input
+        type="assetURL"
+        id="assetURL"
+        placeholder="http://oui.com"
+        v-model="form.assetURL"
+      />
+      <div
+        class="error"
+        v-if="$v.form.assetURL.$invalid && submitStatus === 'ERROR'"
+      >
+        Please enter an asset URL
+      </div>
+      <br />
+      <button v-on:click="createNFT()"><span>Create asset</span></button>
+    </div>
+
+    <script src="helper.js"></script>
+    <script src="ChoiceNFT.js"></script>
+  </body>
+</html>
