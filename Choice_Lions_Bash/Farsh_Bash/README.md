@@ -5,7 +5,7 @@ NFTs are created using Algorand Standard Assets (ASAs), which are built into the
 
 For instance, you need to set the total amount of units you want to create for this asset to 1 and set the number of decimals to 0. This ensures you create precisely one unit of your ASA and can't divide the newly minted asset. However, you can set the number of decimals to any number according to ARC-0003 NFT standard up to protocol limit.
 
-This nft was built with the javascript sdk provided by algorand and it follows the NFT standard for algorand chain
+## This nft was built with the javascript sdk provided by algorand and it follows the NFT standard for algorand chain
 
 Asset Id - https://testnet.algoexplorer.io/asset/67147335
 
