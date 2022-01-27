@@ -7,11 +7,11 @@ For instance, you need to set the total amount of units you want to create for t
 
 ## This nft was built with the javascript sdk provided by algorand and it follows the NFT standard for algorand chain
 
-Asset Id - https://testnet.algoexplorer.io/asset/67147335
+Asset Id - https://testnet.algoexplorer.io/asset/67151196
 
-TnxId - https://testnet.algoexplorer.io/tx/7ICGXGKXRM2GW5AHGEPOQ3ZPDJ4GKFG3E34QVEIWQNDGMCDIS5IQ5AZ22Q
+TnxId - https://testnet.algoexplorer.io/tx/54NJSJNANO56UDVFZTG44VVW6BOJA4KYFXDLJ6SFINAKQHE2PFFQ
 
-creator address. - ZHO5WV5EMHMOFJEF6UTYWWZQFU3D5BQRBMRVYM67WW2NK732JWIJSV5BEM
+creator address. - 3F4WUQ2QAQJWSOSOQHARDDVTJIZB6YDQCLNARO6F2YQMC7EQDDEHE4OMOY
 
 Minted ChoiceNFT: [ChoiceNFT.png](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/ChoiceNFT.png)
 
