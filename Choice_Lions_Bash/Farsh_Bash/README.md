@@ -1,8 +1,8 @@
-## Samuel NFT Contest
+## Farsh NFT Contest
 
-Asset Id - https://testnet.algoexplorer.io/asset/58382538
+Asset Id - https://testnet.algoexplorer.io/asset/67147335
 
-TnxId - https://testnet.algoexplorer.io/tx/PCKMOQWK3Z7KTK5CSOTOD6MHCVTE3UTVKIIWOI5C7576VAVFRBIA
+TnxId - https://testnet.algoexplorer.io/tx/7ICGXGKXRM2GW5AHGEPOQ3ZPDJ4GKFG3E34QVEIWQNDGMCDIS5IQ5AZ22Q
 
 creator address. - ZHO5WV5EMHMOFJEF6UTYWWZQFU3D5BQRBMRVYM67WW2NK732JWIJSV5BEM
 
