@@ -1,0 +1,90 @@
+<%- include("./header"); %>
+
+<div class="mt-28">
+    <!-- error message -->
+    <div id="error" class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    <div id="success" class="success">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+
+    <div class=" flex justify-center items-center mt-5">
+      <div class="w-full max-w-xl">
+          <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+       <div style="display: flex; justify-content: space-between;"> 
+           <h1 class="block text-gray-700 text-xl font-bold mb-2" > Create NFT </h1> 
+           <!-- wallet connection -->
+           <button class="connect pb-5 flex justify-end" id="modalBtn" >  <p class="mt-2 create" >Connect Wallet</p><img class="w-5 h-5" style="margin-top: 9px; margin-left: 8px;" src="https://cdn-icons-png.flaticon.com/512/214/214362.png"/>  </button>
+        </div>
+        <div class="wallet-modal">
+            <div id="simpleModal" class="modal-overlay mt-24 md:mt-0" hidden>
+                <div class="modal-content rounded">
+                  <div class="modal-header bg-blue-800">
+                      <span class="closeBtn"> <img class="w-8 text-white" style="height: 19px;" src="data:image/png;base64,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"> </span>
+                      <h2>Connect your Wallet</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div class="flex inline-flex w-full " onclick="myAlgoWalletConnect()">
+                        <button class="flex border rounded border-gray-700 inline-flex w-full hover:text-white hover:bg-gray-700" href="">
+                            <img style="margin-top: 10px; margin-left: 10px;" class="w-7 text-white " src="https://i.postimg.cc/76r9kXSr/My-Algo-Logo-4c21daa4.png" alt="algorand" srcset="">
+                            <p class="pt-3" style="margin-left: 10px;" > My Algo Wallet</p>
+                        </button>
+                    </div>
+
+                 <div class="flex inline-flex w-full " onclick="algoSignerConnect()" >
+                     <button class="flex border rounded border-gray-700 inline-flex w-full hover:text-white hover:bg-gray-700" href="">
+                         <img style="margin-top: 10px; margin-left: 10px;" class="w-7 text-white " src="https://i.postimg.cc/L4JB4JwT/Algo-Signer-2ec35000.png" alt="algosigner" srcset="">
+                         <p class="pt-3" style="margin-left: 10px;" > Algosigner</p>
+                     </button>
+                </div>
+                  </div>
+               
+                </div>
+              </div>
+        </div>
+        <div class="mb-2">
+      
+      <input id="nftTitle" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Enter TItle"  >
+    </div>
+    <p id="title" class="italic" style="color: red;">Please note that 10 $choice will be commited to generate NFT</p>
+
+	<div class="imageUpload mt-3">
+            
+		<div class="center" style="margin: 10px;">
+		 <div class="form-input" >
+		   <div class="preview" >
+			 <img id="file-ip-1-preview">
+		   </div>
+		   <label id="change" class="bg-gray-700" for="file-ip-1">Upload Image</label>
+		   <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+		   
+		 </div>
+	   </div> 
+		</div>
+     <div style="display: flex; justify-content: space-between;">
+        <a onclick="checkWalletToTransferChoice()" style="cursor: pointer;" class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >SEND $CHOICE BEFORE GENERATING NFT</a>
+        <a onclick="checkWalletToGenerateNFT()" style="cursor: pointer;"  class="bg-gray-700 mt-2 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" >GENERATE NFT</a>
+     </div>
+     
+  </div>
+      </div>
+  </div>
+  </div>
+  <script>
+	  function showPreview(event){
+  if(event.target.files.length > 0){
+    let change = document.getElementById("change");
+    let src = URL.createObjectURL(event.target.files[0]);
+    let preview = document.getElementById("file-ip-1-preview");
+    change.textContent = "Change Image";
+    preview.src = src;
+    
+    preview.style.padding = "20px";
+    preview.style.display = "block";
+  }
+}
+  </script>
+<script src="../script.js"></script>
+<script src="../myalgowallet.js"></script>
+<script src="../algosigner.js"></script>
