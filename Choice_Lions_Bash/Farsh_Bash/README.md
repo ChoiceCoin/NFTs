@@ -4,6 +4,12 @@ Non-Fungible tokens are a configurable subset of Algorand Standard Assets (ASA) 
 
 NFTs are created using Algorand Standard Assets (ASAs), which are built into the protocol and created using a special type of transaction. This is distinct from some other blockchains where a smart contract is necessary to represent assets.
 
+# The Interface
+
+![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot1.jpg)
+![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot 2.jpg)
+![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot 3.jpg)
+
 ## RUN ON YOUR LOCAL MACHINE
 
 - `git clone` the repository
