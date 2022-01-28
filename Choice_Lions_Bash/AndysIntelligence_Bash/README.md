@@ -12,3 +12,5 @@ $ pip install -r requirements.txt
 ```sh
 $ python3 run.py
 ```
+
+youtube link: https://www.youtube.com/watch?v=Todlu3BzYxA
