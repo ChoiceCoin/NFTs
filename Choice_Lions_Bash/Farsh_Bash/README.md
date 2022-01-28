@@ -7,8 +7,8 @@ NFTs are created using Algorand Standard Assets (ASAs), which are built into the
 # The Interface
 
 ![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot1.jpg)
-![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot 2.jpg)
-![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot 3.jpg)
+![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot%202.jpg)
+![alt text](https://github.com/farsh268/NFTs/blob/main/Choice_Lions_Bash/Farsh_Bash/static/image/screenshot%203.jpg)
 
 ## RUN ON YOUR LOCAL MACHINE
 
