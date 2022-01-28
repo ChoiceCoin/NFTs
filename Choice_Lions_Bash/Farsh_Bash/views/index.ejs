@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Choice NFT App</title>
+  </head>
+  <body class="body-bg">
+    <nav
+      class="d-flex justify-content-between align-items-center w-100 fixed position-fixed p-2 pb-3"
+    >
+      <div class="ml-5 choice">Choice Coin</div>
+      <!-- error message -->
+      <div id="error" class="d-none alert alert-danger"></div>
+
+      <!-- success message -->
+      <div id="success" class="d-none alert alert-success"></div>
+
+      <div class="mr-5 wallet">
+        <div
+          id="get_address"
+          class="d-none text-light bg-dark justify-content-center align-items-center"
+        >
+          <span class="textinput2" id="wallet_value"></span>
+
+          <i
+            style="font-size: 10px; cursor: pointer"
+            onclick="myFunction()"
+            class="fa"
+            >&#xf0c5;</i
+          >
+        </div>
+
+        <div class="dropdown" id="dropdown" data-toggle="dropdown">
+          <button
+            class="text-white btn-outline-secondary rounded connectbtn btn-dark btn btn-light btn-md"
+            type="button"
+            id="dropdownMenu2"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Connect Wallet
+            <i
+              class="fas fa-wifi"
+              style="font-size: 16px; color: white; margin-left: 5px"
+            ></i>
+          </button>
+          <div
+            class="dropdown-menu border-0 shadow p-3 mb-5 bg-white rounded"
+            aria-labelledby="dropdownMenu2"
+          >
+            <button
+              class="btn dropdown-item bg-light"
+              type="button"
+              onclick="myAlgoSignerConnect()"
+            >
+              Algo Signer
+            </button>
+            <hr />
+            <button
+              class="btn dropdown-item bg-light"
+              type="button"
+              onclick="myAlgoWalletConnect()"
+            >
+              My Algo Wallet
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <hr class="mt-5" />
+    <nav class="menu">
+      <div class="menu__item">
+        <div class="marquee">
+          <div class="marquee__inner" aria-hidden="true">
+            <span
+              ><i
+                class="fas fa-star"
+                style="font-size: 10px; color: #b6b6b6"
+              ></i>
+              <span class="ml-2 mr-2"
+                >JOIN OUR DISCORD SERVER TO LEARN MORE AND PARTICIPATE IN OUR
+                OPEN SOURCE REWARDS PROGRAMS</span
+              ></span
+            >
+            <span
+              ><i
+                class="fas fa-star"
+                style="font-size: 10px; color: #b6b6b6"
+              ></i>
+              <span class="ml-2 mr-2"
+                >JOIN OUR DISCORD SERVER TO LEARN MORE AND PARTICIPATE IN OUR
+                OPEN SOURCE REWARDS PROGRAMS</span
+              ></span
+            >
+            <span
+              ><i
+                class="fas fa-star"
+                style="font-size: 10px; color: #b6b6b6"
+              ></i>
+              <span class="ml-2 mr-2"
+                >JOIN OUR DISCORD SERVER TO LEARN MORE AND PARTICIPATE IN OUR
+                OPEN SOURCE REWARDS PROGRAMS</span
+              ></span
+            >
+            <span
+              ><i
+                class="fas fa-star"
+                style="font-size: 10px; color: #b6b6b6"
+              ></i>
+              <span class="ml-2 mr-2"
+                >JOIN OUR DISCORD SERVER TO LEARN MORE AND PARTICIPATE IN OUR
+                OPEN SOURCE REWARDS PROGRAMS!</span
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <hr class="second" />
+
+    <div class="d-flex justify-content-center flex-column align-items-center">
+      <div
+        class="text-light text-center d-flex justify-content-center align-items-center"
+      >
+        <h1 class="header mb-1">CREATE NFT</h1>
+      </div>
+      <div
+        class="mb-3 mt-2 p-4 box primary-bg-blur d-flex flex-column align-items-center justify-content-center"
+      >
+        <div
+          class="text-center mb-4 text-white d-flex justify-content-center align-items-center"
+        >
+          <div class="mr-3">
+            <input
+              id="nft_name"
+              type="text"
+              class="blue text-center"
+              placeholder="Enter the name of your NFT"
+            />
+          </div>
+          <div>
+            <label id="change" class="bg-gray-700" for="file-input">
+              <i
+                class="fas fa-file-upload btn"
+                style="font-size: 36px; color: white"
+              ></i
+            ></label>
+            <input
+              style="display: none"
+              type="file"
+              id="file-input"
+              accept="image/*"
+              onchange="showPreview(event);"
+            />
+          </div>
+        </div>
+        <p id="title" class="italic text-center" style="font-size: 14px">
+          <i>Please note that 10 $choice will be commited to generate NFT</i>
+        </p>
+        <div class="imageUpload">
+          <div class="center" style="margin: 10px">
+            <div class="form-input">
+              <div class="preview">
+                <img id="file-input-preview" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center b-3 mb-2 d-flex flex-row justify-content-center align-items-center"
+          id="submit"
+        >
+          <button
+            class="btn btn-light btn-md mt-3 w-100"
+            id="submit2"
+            onclick="transferChoice()"
+          >
+            Send $10 Choice to generate NFT
+          </button>
+          <div class="text-center ml-3 mt-3" onclick="generateNFT()">
+            <i
+              class="btn fas fa-cloud-upload-alt"
+              style="font-size: 36px; color: #fff"
+            ></i>
+          </div>
+
+          <!-- Modal -->
+        </div>
+        <div
+          id="pinata-link"
+          style="
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            word-wrap: break-word;
+          "
+          class="d-none"
+        >
+          This is your generated NFT Link:
+          https://gateway.pinata.cloud/ipfs/QmSY3G73n6H8S848SxjCpZZAXvVZTiCXAk1nGZeM2JKLy4?preview=1
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPreview() {
+        if (event.target.files.length > 0) {
+          let change = document.getElementById("change");
+          let src = URL.createObjectURL(event.target.files[0]);
+          let preview = document.getElementById("file-input-preview");
+
+          preview.src = src;
+          preview.style.padding = "5px";
+          preview.style.display = "block";
+        }
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/algo.js"></script>
+    <script src="/js/algowallet.js"></script>
+
+    <script src="/js/algosigner.js"></script>
+  </body>
+</html>
