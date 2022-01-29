@@ -20,12 +20,13 @@ const nftImage = document.getElementById("file-input");
 const err = document.getElementById("error");
 const success = document.getElementById("success");
 const pinata = document.getElementById("pinata-link");
+const upload = document.getElementById("upload");
+const uploadbtn = document.getElementById("btn-upload");
 
 const defaultFrozen = false;
 const unitName = "NFT";
 let assetName;
-const url =
-  "https://gateway.pinata.cloud/ipfs/QmSY3G73n6H8S848SxjCpZZAXvVZTiCXAk1nGZeM2JKLy4?preview=1";
+const url = `${asset_url}`;
 const managerAddr =
   "ZU7NJ2X2XNELIGJBUW57PETCEK4HXHL2FJKOP2DRRWWBYH2B2JPI2WDA34";
 const reserveAddr = undefined;
@@ -69,6 +70,9 @@ const transferChoice = async () => {
         if (sendTxn) {
           success.textContent = "Choice sent!, You can now generate NFT";
           success.classList.remove("d-none");
+          upload.setAttribute("onclick", "generateNFT()");
+          uploadbtn.disabled = false;
+          uploadbtn.removeAttribute("style");
           setTimeout(() => {
             success.classList.add("d-none");
           }, 1000);
@@ -83,6 +87,9 @@ const transferChoice = async () => {
         if (response) {
           success.textContent = "Choice sent!, You can now generate NFT";
           success.classList.remove("d-none");
+          upload.setAttribute("onclick", "generateNFT()");
+          uploadbtn.disabled = false;
+          uploadbtn.removeAttribute("style");
           setTimeout(() => {
             success.classList.add("d-none");
           }, 1000);
@@ -122,7 +129,6 @@ const generateNFT = async () => {
     // Construct the transaction
     assetName = nftName.value;
     const params = await algodClient.getTransactionParams().do();
-
     const txn = algosdk.makeAssetCreateTxnWithSuggestedParamsFromObject({
       from: connectedAddress,
       total,
@@ -138,7 +144,6 @@ const generateNFT = async () => {
       reserve: reserveAddr,
       suggestedParams: params,
     });
-
     // If Algosigner account is connected, Use the AlgoSigner extension to make the transactions base64
     try {
       const txn_b64 = AlgoSigner.encoding.msgpackToBase64(txn.toByte());
@@ -150,6 +155,7 @@ const generateNFT = async () => {
       if (sendTxn) {
         success.textContent = `On Chain NFT Generated, TxID: ${sendTxn.txId}`;
         success.classList.remove("d-none");
+        pinata.textContent = `This is your generated NFT Link: ${asset_url}`;
         pinata.classList.remove("d-none");
       } else {
         err.textContent = "Error Generating NFT";
@@ -166,6 +172,7 @@ const generateNFT = async () => {
       if (response) {
         success.textContent = `On Chain NFT Generated, TxID: ${response.txId}`;
         success.classList.remove("d-none");
+        pinata.textContent = `This is your generated NFT Link: ${asset_url}`;
         pinata.classList.remove("d-none");
       } else {
         err.textContent = "Error Generating NFT";
