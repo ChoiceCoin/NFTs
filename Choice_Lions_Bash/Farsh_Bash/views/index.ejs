@@ -193,11 +193,19 @@
           >
             Send $10 Choice to generate NFT
           </button>
-          <div class="text-center ml-3 mt-3" onclick="generateNFT()">
-            <i
-              class="btn fas fa-cloud-upload-alt"
-              style="font-size: 36px; color: #fff"
-            ></i>
+          <div class="text-center ml-3 mt-3" id="upload">
+            <button
+              type="button"
+              class="btn"
+              id="btn-upload"
+              style="cursor: default"
+              disabled
+            >
+              <i
+                class="fas fa-cloud-upload-alt"
+                style="font-size: 36px; color: #fff"
+              ></i>
+            </button>
           </div>
 
           <!-- Modal -->
@@ -211,23 +219,41 @@
             word-wrap: break-word;
           "
           class="d-none"
-        >
-          This is your generated NFT Link:
-          https://gateway.pinata.cloud/ipfs/QmSY3G73n6H8S848SxjCpZZAXvVZTiCXAk1nGZeM2JKLy4?preview=1
-        </div>
+        ></div>
       </div>
     </div>
 
     <script>
+      let asset_url;
       function showPreview() {
         if (event.target.files.length > 0) {
           let change = document.getElementById("change");
-          let src = URL.createObjectURL(event.target.files[0]);
+          var file = event.target.files[0];
+          let src = URL.createObjectURL(file);
           let preview = document.getElementById("file-input-preview");
-
           preview.src = src;
           preview.style.padding = "5px";
           preview.style.display = "block";
+          var CLOUDINARY_URL =
+            "https://api.cloudinary.com/v1_1/farsh2682/upload";
+          var CLOUDINARY_UPLOAD_PRESET = "ndorxgmq";
+          var formData = new FormData();
+          formData.append("file", file);
+          formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+          console.log("formData", formData);
+          axios({
+            url: CLOUDINARY_URL,
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            data: formData,
+          })
+            .then(function (res) {
+              console.log(res.data.secure_url);
+              asset_url = res.data.secure_url;
+            })
+            .catch((err) => console.log(err));
         }
       }
     </script>
@@ -238,6 +264,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/algosdk@1.13.0-beta.1/dist/browser/algosdk.min.js"></script>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/algo.js"></script>
     <script src="/js/algowallet.js"></script>
