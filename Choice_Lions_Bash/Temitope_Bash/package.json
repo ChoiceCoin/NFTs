@@ -1,0 +1,16 @@
+{
+  "name": "temitope_bash",
+  "version": "1.0.0",
+  "description": "Choice/Lion NFT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  
+  "dependencies": {
+    "algosdk": "^1.12.0"
+    }
+  
+}
