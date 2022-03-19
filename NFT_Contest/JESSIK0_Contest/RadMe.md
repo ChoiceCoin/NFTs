@@ -1,0 +1,9 @@
++ + To Choice COIN NFT REPO
+
++ + Designed By Jessika
+
++ + TXN ID : AFU3JY5TAQNQAUAOKOWZKVKDQNWRNUK4SF3SPPRMZOWBBKKUFRBA
+
++ + LINK ON ALGO EXPLORE : https://algoexplorer.io/asset/541249752
+
++ + DISCORD NAME: Jessika0
