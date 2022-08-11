@@ -1,9 +1,53 @@
 // Imports
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+
+// Wallet Connect
+// const isPhantomInstalled = window.phantom?.solana?.isPhantom
+const getProvider = () => {
+  if ('phantom' in window) {
+    const provider = window.phantom?.solana;
+    if (provider?.isPhantom) {
+      return provider;
+    }
+  }
+  window.open('https://phantom.app/', '_blank');
+};
+
 
 // React functions must return a React component
 function App() {
+  // Set State
+  const [currentFile,setCurrentFile] = useState(null)
+
+  // Wallet Connect
+  const provider = getProvider();
+  async function walletConnect() {
+    try {
+      const resp = await provider.connect();
+      console.log(resp.publicKey.toString());
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  async function walletDisconnect(){
+    try {
+      const resp = await provider.disconnect();
+      console.log(resp);
+    } catch (err) {
+    console.log(err)
+    }
+  }
+  async function uploadFile(event){
+    const [file] = event.target.files;
+    setCurrentFile(file);
+  }
+
+  async function nftMint(){
+
+  }
+
   useEffect(() => {
   }, [])
   return (
@@ -20,10 +64,10 @@ function App() {
             Wallet Connect
           </div>
           <div>
-            <button id='button1'> Connect</button>
+            <button id='button1' onClick={walletConnect}>Connect</button>
           </div>
           <div>
-            <button id='button2'>Disconnect</button>
+            <button id='button2' onClick={walletDisconnect}>Disconnect</button>
           </div>
         </div>
 
@@ -31,15 +75,13 @@ function App() {
 
         <div id ="properties">
           <div>
-            NFT Properties
+            Properties
           </div>
+
           <div>
-            <button id='button3' >Upload Image</button>
+            < input id='image' onChange={uploadFile} type='file'/> 
           </div>
-          <div>
-            Royalty Rate:
-            <input id="amount" type="number"/>
-          </div>
+
           <div>
             Check the box to affirm acceptance.
             <input id="TC" type="radio"/>
@@ -53,7 +95,7 @@ function App() {
             Mint NFT
           </div>
           <div>
-            <button id='button4' >Mint</button>
+            <button id='button4' onClick={nftMint}>Mint</button>
           </div>
         </div>
 
