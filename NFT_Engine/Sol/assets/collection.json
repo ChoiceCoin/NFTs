@@ -1,0 +1,15 @@
+{
+    "name": "Test Collection",
+    "symbol": "TC",
+    "description": "Test.",
+    "image": "collection.png",
+    "attributes": [],
+    "properties": {
+      "files": [
+        {
+          "uri": "collection.png",
+          "type": "image/png"
+        }
+      ]
+    }
+  }
