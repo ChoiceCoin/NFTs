@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.resl {
+  width: auto;
+  height: auto;
+  border: 2px solid;
+  background-color: #fff;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #000;
+  z-index: 100000;
+}
+#img {
+  margin-top: 20px;
+  width: 180px;
+  height: 180px;
+}
+#divS {
+  margin-left: 10px;
+  display: table-caption;
+}
+#slide {
+  display: flex;
+}
+#h {
+  color: #378805;
+  font-size: 28px;
+  text-align: center;
+}
+#connectWallet {
+  width: 100px;
+  color: white;
+  margin-left: 45%;
+  padding: 8px;
+  background-color: #378805;
+  margin-top: 80px;
+  border-radius: 10px;
+}
+#btn12 {
+  width: 100px;
+  border-radius: 10px;
+  white-space: nowrap;
+  padding: 10px;
+  outline: none;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+#image_input {
+  margin-top: 20px;
+}
+#pps {
+  padding: 5px;
+  font-size: 20px;
+  color: #378805;
+  text-align: center;
+}
+#chA {
+  padding: 5px;
+  font-size: 18px;
+  color: #378805;
+  text-align: center;
+}
+#yessorno {
+  display: flex;
+  justify-content: space-around;
+}
+#yes:hover {
+  background-color: green;
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+}
+#no:hover {
+  padding: 10px;
+  background-color: red;
+  border-radius: 4px;
+  color: white;
+}
