@@ -1,5 +1,0 @@
-{
-    "description" : "An image of the  captured ChoiceEtherumNFT.",
-    "image" : "https://ipfs.io/ipfs/Qmf1r8igsCAFTFjrQrK7jk6uD6YKVYo5dGu7cvm9TmPhJV",
-    "photographer" : "implicit"
-}
