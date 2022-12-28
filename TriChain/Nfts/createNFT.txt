@@ -1,0 +1,5 @@
+require('dotenv').config();
+const API_URL = process.env.API_URL;
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
+const alchemyWeb3 = createAlchemyWeb3(API_URL);
+const contract = require("../artifacts/contracts/choiceEtherumNFT.sol/TorNFT.json"); 

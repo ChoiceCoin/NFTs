@@ -1,0 +1,25 @@
+{
+  "name": "EZEMUOO",
+  "description": "EZE",
+  "image": "https://gateway.pinata.cloud/ipfs/QmXaTNVAgr51GpJqSEiUxZAFXuEFNCSMiz4ukrAjhRuiFP?preview=1",
+  "image_integrity": "sha1-5d72fda7fb07c016ba1e5be958476ba4067168f4",
+  "properties": {
+    "simple_property": "EZEMUO",
+    "rich_property": {
+      "name": "EZEMUO",
+      "value": "001",
+      "display_value": "001",
+      "class": "emphasis",
+      "css": {
+        "color": "#ffffff",
+        "font-weight": "bold",
+        "text-decoration": "underline"
+      }
+    },
+    "array_property": {
+      "name": "Artwork",
+      "value": [1, 2, 3, 4],
+      "class": "emphasis"
+    }
+  }
+}
